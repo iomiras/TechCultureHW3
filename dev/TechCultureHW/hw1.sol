@@ -32,7 +32,7 @@ contract Token {
 
     function transfer(address recipient, uint amount) external returns (bool)
     {
-        require(!blackList[msg.sender], "You can't send money. You are in Black list");
+        require(!blackList[msg.sender], "You cant send money. You are in Black list");
         balancOf[msg.sender] -= amount;
         balancOf[recipient] += amount;
         emit Transfer(msg.sender, recipient, amount);
